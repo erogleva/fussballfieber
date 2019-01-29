@@ -1,0 +1,64 @@
+/functions-cron/appengine/php/client_secret.json
+/functions-cron/appengine/php/twitter_secret.json
+
+# compiled output
+/dist
+/env
+/tmp
+/out-tsc
+/docs/build
+
+# dependencies
+/node_modules
+/functions/.runtimeconfig.json
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+
+src/app/config
+/php
+package-lock.json
+/api-client-python
+
+functions/node_modules
+functions/build
+functions/firebase-debug.log
+
+functions-cron/appengine/vendor
+functions-cron/appengine/composer.lock
+functions-cron/appengine/lib
+functions-cron/appengine/client_secret.json
+
+functions-cron/node_modules
+functions-cron/package-lock.json
+venv
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+# System Files
+.DS_Store
+Thumbs.db

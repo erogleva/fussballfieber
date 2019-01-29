@@ -1,0 +1,76 @@
+.date  {
+  text-align: center;
+}
+
+.date time span{display: block}
+
+.date time span:first-child
+{
+  color: #2b2b2b;
+  font-weight: 600;
+  font-size: 1.5rem
+}
+
+.date time span:last-child
+{
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: -10px;
+  color: #ff8939;
+}
+
+@media (max-width: 480px) {
+  .row div:first-child {
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .row div:last-child {
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.day {
+  background-color: #fff;
+  border-radius: 10px;
+  margin: .5rem;
+}
+
+.fill {
+  min-height: 100%;
+  height: 100%;
+}
+
+.eventList {
+  border-left: 2px dashed #dadde6;
+}
+
+.eventList .row:first-child {
+  margin-top: 4px;
+}
+
+h4 {
+  color: #3C3C3C;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin: 0;
+  text-transform: none;
+}
+
+h4:first-child {
+  margin-top: 5px;
+}
+
+.timestamp {
+  display: block;
+  text-decoration: none;
+  background-color: #D8DDE0;
+  color: #000;
+  float: left;
+  text-align: center;
+  padding: 0.5rem;
+  margin-bottom: 4px;
+}

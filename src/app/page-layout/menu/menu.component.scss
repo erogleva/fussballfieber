@@ -1,0 +1,150 @@
+#main {
+  display: none;
+}
+
+#main {
+  float: right;
+  transition: margin-right .5s;
+}
+
+nav {
+  background-color: transparent;
+}
+
+.navbar-brand {
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+@media only screen and (min-width: 960px) {
+  nav {
+    margin: 0 auto;
+    width: calc(100vw - 0.2 * 100vw) !important;
+  }
+}
+
+a.openNav {
+  font-size: 26px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.sidenav .nav-link {
+  color: #fff;
+  border-bottom: none;
+  opacity: 0.5;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.mob-ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  border-bottom: none;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 36px;
+  margin-right: 15px;
+}
+
+.sidenav li {
+  padding: 0 3px !important;
+  position: relative;
+}
+
+.sidenav li a {
+  padding: 10px 15px;
+  border-bottom: none;
+  text-transform: uppercase;
+}
+
+.sidenav ul li:hover .nav-link {
+  color: #008ba3;
+}
+
+li.nav-item a:hover {
+  background: #008ba3;
+  color: #fff !important;
+}
+
+li a:focus, a:hover {
+  outline: none;
+  text-decoration: none;
+}
+
+@media (max-width: 960px) {
+  .nav-link {
+    background-color: black;
+  }
+}
+
+.nav-link a {
+  color: #fff;
+  border-bottom: none;
+  text-decoration: none;
+  font-size: 1.2rem;
+  line-height: 1.72rem;
+  opacity: 0.5;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.nav-link a:hover {
+  opacity: 1;
+}
+
+.nav-link a.router-link-active {
+  border-bottom: 1px dotted #cecece;
+}
+
+.mybg-dark {
+  background-color: #000;
+}
+
+.navbar-shrink {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.language-flag {
+  height: 1rem;
+}
+
+.dropdown-menu span {
+  cursor: pointer;
+}

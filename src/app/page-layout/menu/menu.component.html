@@ -1,0 +1,92 @@
+<ng-container id="top" class="container">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-shrink navbar-dark"
+       [class.mybg-dark]="!isTopOfPage">
+
+    <a class="navbar-brand" href="https://www.fussballfieber2019.de">
+      <!--<img [style.width.px]="imageSize" src="/assets/images/logo.png"/>-->
+      Fußballfieber 2019
+    </a>
+    <button class="navbar-toggler navbar-toggler-right"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarResponsive"
+            aria-controls="navbarResponsive"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="fa fa-bars mfa-white"></span>
+    </button>
+
+    <div id="main">
+      <button class="openNav"><span class="fa fa-bars"></span></button>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+      <button class="closebtn">×</button>
+      <ul class="mob-ul">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/startseite" routerLinkActive="router-link-active">{{'pages.home' |
+            translate}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/spiel" routerLinkActive="router-link-active">{{'pages.match' |
+            translate}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/event" routerLinkActive="router-link-active">{{'pages.program' |
+            translate}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/sponsoren" routerLinkActive="router-link-active">{{'pages.sponsors' |
+            translate}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/media" routerLinkActive="router-link-active">{{'pages.contact' |
+            translate}}</a>
+        </li>
+      </ul>
+    </div>
+
+
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-link">
+          <a routerLink="/startseite" routerLinkActive="router-link-active">{{'pages.home' | translate}}</a>
+        </li>
+        <li class="nav-link">
+          <a routerLink="/spiel" routerLinkActive="router-link-active">{{'pages.match' | translate}}</a>
+        </li>
+        <li class="nav-link">
+          <a routerLink="/event" routerLinkActive="router-link-active">{{'pages.program' | translate}}</a>
+        </li>
+        <li class="nav-link">
+          <a routerLink="/sponsoren" routerLinkActive="router-link-active">{{'pages.sponsors' | translate}}</a>
+        </li>
+        <li class="nav-link">
+          <a routerLink="/ansprechpartner" routerLinkActive="router-link-active">{{'pages.contact' | translate}}</a>
+        </li>
+
+        <li class="nav-link dropdown">
+          <a title="{{'chooseLanguage' | translate}}" class="dropdown-toggle" data-toggle="dropdown" href="#"
+             role="button" aria-haspopup="true" aria-expanded="false">
+            <img class="language-flag"
+                 [title]="'languages' + currentLang | translate"
+                 [src]="sanitizer.bypassSecurityTrustUrl(currentLang.icon)"/>
+          </a>
+          <div class="dropdown-menu">
+            <ng-container *ngFor="let lang of langList$ | async">
+              <span *ngIf="lang.code !== currentLang"
+                    (click)="changeLang(lang)"
+                    class="dropdown-item">
+                <img class="language-flag"
+                     [title]="'languages' + lang.name | translate"
+                     [src]="sanitizer.bypassSecurityTrustUrl(lang.icon)"/>
+                {{'languages.' + lang.name | translate}}
+              </span>
+            </ng-container>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+</ng-container>

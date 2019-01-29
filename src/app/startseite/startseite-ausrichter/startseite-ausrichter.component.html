@@ -1,0 +1,71 @@
+<!-- Ausrichter -->
+<section id="ausrichter" class="subsection">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-offset-1 col-lg-10">
+        <h3>Unser Planungsteam</h3>
+
+        <div class="row">
+          <!-- Team teamMember -->
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-3"
+               *ngFor="let teamMember of teamMembers | orderBy: ['firstName', 'lastName']; let i = index">
+            <div class="image-flip h-100" [ngClass]="teamMember.showBackside ? 'hover' : ''">
+              <div class="mainflip h-100">
+                <div class="frontside h-100" (click)="changeStatus(teamMember)">
+                  <div class="card h-100">
+                    <div class="card-body text-center">
+                      <img class="img-fluid" *ngIf="teamMember.imageUrl" [src]="teamMember.imageUrl" alt="card image">
+                      <h4 class="card-title">{{teamMember.firstName}} {{teamMember.lastName}}</h4>
+                      <p class="card-text text-black-50">
+                        <span style="font-weight: bold;color: #ff6600;">{{teamMember.positionInOrg}}</span><br/>
+                        {{teamMember.age}} Jahre
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="backside h-100">
+                  <div class="card h-100">
+                    <div class="card-body text-center mt-4">
+                      <div (click)="changeStatus(teamMember)">
+                        <h4 class="card-title">{{teamMember.firstName}} {{teamMember.lastName}}</h4>
+                        <p class="card-text text-black-50">
+                          {{teamMember.job}}<br/>
+                          <span style="font-weight: bold;color: #ff6600;">{{teamMember.positionInClub}}, {{teamMember.club}}</span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="card-footer text-center">
+                      <ul class="list-inline">
+                        <li class="list-inline-item" *ngIf="teamMember.facebook">
+                          <a rel="noopener" aria-label="Facebook" class="social-icon text-xs-center" target="_blank"
+                             [href]="teamMember.facebook">
+                            <i class="fa fa-facebook"></i>
+                          </a>
+                        </li>
+                        <li class="list-inline-item" *ngIf="teamMember.twitter">
+                          <a rel="noopener" aria-label="Twitter" class="social-icon text-xs-center" target="_blank"
+                             [href]="teamMember.twitter">
+                            <i class="fa fa-twitter"></i>
+                          </a>
+                        </li>
+                        <li class="list-inline-item" *ngIf="teamMember.email">
+                          <a aria-label="Mail Kontakt" class="social-icon text-xs-center" target="_blank"
+                             [href]="'mailto:' + teamMember.email">
+                            <i class="fa fa-envelope"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ./Team teamMember -->
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section><!-- //Ausrichter -->

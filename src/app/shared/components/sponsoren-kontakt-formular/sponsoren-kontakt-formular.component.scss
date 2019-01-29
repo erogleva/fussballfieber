@@ -1,0 +1,46 @@
+#datenschutz {
+  margin-top: .5rem;
+  margin-right: 2rem;
+}
+
+.contact_form .input-field label {
+  color:white;
+}
+
+.contact_form .input-field {
+  margin-bottom: 1.72rem;
+}
+
+.contact_form input[type=text],
+.contact_form input[type=password],
+.contact_form input[type=email],
+.contact_form input[type=date],
+.contact_form textarea {
+  border-bottom: 1px solid rgba(255, 255, 255, .7);
+}
+
+#message {
+  display: none;
+  position: fixed;
+  z-index: 3000;
+  width: 40rem;
+  top: 50%;
+  left: 50%;
+  margin-top: -8.5rem;
+  margin-left: -20rem;
+  text-align: center;
+}
+
+#message.warning {
+  background: #F44336;
+}
+
+#message.success {
+  background: #4CAF50;
+}
+
+#alert {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 2rem;
+}

@@ -1,0 +1,21 @@
+{
+  "chooseLanguage": "choose Language",
+  "languages": {
+    "German": "German",
+    "English": "English",
+    "Spanish": "Spanish"
+  },
+  "pages": {
+    "home": "Home",
+    "match": "The match",
+    "program": "Program",
+    "sponsors": "Sponsors",
+    "contact": "Contact"
+  },
+  "header": {
+    "title": "Fußballfieber",
+    "date": "From 05/29 till 2019/06/05",
+    "subTitle": "The 168 hours world record from Winterbach",
+    "infoBtn": "Read Information"
+  }
+}

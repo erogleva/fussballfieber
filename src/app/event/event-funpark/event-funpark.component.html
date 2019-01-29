@@ -1,0 +1,26 @@
+<div class="row">
+
+  <div class="col-xs-12">
+    <h3>Funpark für unsere Gäste</h3>
+    <p>
+      Auf dem Veranstaltungsgelände gibt es neben dem Programm für die kleinen und Großen Gäste auch die Möglichkeit,
+      sich selbst sportlich zu betätigen.
+      Neben einer Hüpfburg könnt ihr euch mit anderen Spielern beim Fußball-Dart, dem Geschwindigkeitsschießen oder in
+      einem Hindernis-Parcours messen.
+    </p>
+
+    <div class="row">
+      <div class="col-xs-12 mb-3" *ngFor="let event of events">
+        <div class="card">
+          <img *ngIf="event.imageUrl !== ''" class="card-img-top" [src]="event.imageUrl" alt="{{event.title}}">
+          <div class="card-body">
+            <h5 class="card-title border-bottom">{{event.title}}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>

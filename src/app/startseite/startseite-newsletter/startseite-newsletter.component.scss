@@ -1,0 +1,52 @@
+#newsletter {
+  background: url('https://sfwinterbach.com/?APF_tools_media-action:streamMedia=namespace:APPLICATION_media_images_sfw_frontend|filebody:header|extension:jpg') repeat-y 0 0 fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+}
+
+.newsletter_form input[type=text],
+.newsletter_form input[type=password],
+.newsletter_form input[type=email],
+.newsletter_form input[type=date],
+.newsletter_form textarea {
+  border-bottom: 1px solid rgba(255, 255, 255, .7);
+}
+
+.newsletter-box {
+  background: #7f7f7f;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+}
+
+.newsletter_form .input-field {
+  width: 20rem;
+}
+
+.newsletter_form button {
+  margin-left: 2rem;
+}
+
+#preview p {
+  margin: 0;
+  line-height: 0.8rem;
+}
+
+#preview {
+  opacity: 0;
+  display: block;
+  position: absolute;
+  width: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#preview.show_message {
+  opacity: 1;
+  animation: animLoadedContent 0.8s cubic-bezier(0.7, 0, 0.3, 1) both;
+  -webkit-animation: animLoadedContent 0.8s cubic-bezier(0.7, 0, 0.3, 1) both;
+}

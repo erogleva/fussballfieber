@@ -1,0 +1,26 @@
+<!-- Header -->
+<header class="text-white">
+  <div class="overlay"></div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 text-center mb-5">
+        <h3 class="my-heading">{{'header.title' | translate}} <small>{{'header.date' | translate}}</small></h3>
+        <p class="myp-slider text-center">{{'header.subTitle' | translate}}</p>
+      </div>
+
+      <div class="col-md-12 text-center">
+        <count-down-timer [end]="'2019-05-29 20:00:00'"></count-down-timer>
+      </div>
+
+      <div class="col-md-12 text-center mt-2">
+        <div class="scroll-down">
+          <a class="btn btn-primary btn-scroll floating-arrow"
+             (click)="myScrollService.scrollTo({target: 'content'})"
+             id="bottom">
+            <i class="fa fa-angle-down"></i> {{'header.infoBtn' | translate}}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header><!-- //Header -->

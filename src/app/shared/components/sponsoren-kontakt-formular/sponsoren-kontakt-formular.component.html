@@ -1,0 +1,64 @@
+<div class="content-box">
+  <h3><i class="fa fa-address-card"></i> Kontakt</h3>
+  <p>Sie haben Fragen zu unserem Projekt? Melden Sie sich einfach bei uns <!-- über das nachfolgende Formular oder
+    direkt--> per E-Mail <!--an-->
+    <a class="text-white" href="mailto: info@fussballfieber2019.de">info@fussballfieber2019.de</a>.</p>
+
+  <!--<form id="contact-form"
+        method="post"
+        [formGroup]="form"
+        (submit)="submitContactForm()">
+    <div class="contact_form">
+      <div class="input-field">
+        <input id="first_name" placeholder="Ihr Name" type="text" name="contact-name" formControlName="name"/>
+        <div class="alert alert-danger" *ngIf="form.get('name').touched && form.get('name').errors">
+          <span *ngIf="form.get('name').errors.required">Dies ist ein Pflichtfeld.</span>
+          <span *ngIf="!form.get('name').errors.required && form.get('name').errors.minlength">Die Eingabe ist zu kurz (mindestens 5 Zeichen)</span>
+          <span *ngIf="!form.get('name').errors.required && form.get('name').errors.maxlength">Die Eingabe ist zu lang (maximal 100 Zeichen)</span>
+        </div>
+      </div>
+
+      <div class="input-field">
+        <input id="contact_email" placeholder="E-Mail Addresse" type="email" name="contact-email"
+               formControlName="email"/>
+        <div class="alert alert-danger" *ngIf="form.get('email').touched && form.get('email').errors">
+          <span *ngIf="form.get('email').errors.required">Dies ist ein Pflichtfeld.</span>
+          <span *ngIf="!form.get('email').errors.required && form.get('email').errors.email">Dies ist keine gültige Email Adresse.</span>
+          <span *ngIf="!form.get('email').errors.required && form.get('email').errors.maxlength">Die Eingabe ist zu lang (maximal 100 Zeichen)</span>
+        </div>
+      </div>
+      <div class="input-field">
+        <textarea class="materialize-textarea" placeholder="Nachricht" name="contact-message"
+                  formControlName="message"></textarea>
+        <div class="alert alert-danger" *ngIf="form.get('message').touched && form.get('message').errors">
+          <span *ngIf="form.get('message').errors.required">Dies ist ein Pflichtfeld.</span>
+        </div>
+      </div>
+
+      <h5>Datenschutzhinweis*</h5>
+      <div style="display: flex; justify-content: center; align-content: flex-start">
+        <div class="input-field">
+          <input type="checkbox" name="datenschutz" id="datenschutz" formControlName="dsgvo"/>
+        </div>
+        <p>
+          Ich willige ein, dass die von mir übermittelten Informationen und Kontaktdaten dazu verwendet um mit mir
+          anlässlich meiner Kontaktaufnahme in Verbindung zu treten,
+          mit mir zu kommunizieren und meine Anfrage abzuwickeln. Dies gilt insbesondere für die Verwendung der
+          E-Mail-Adresse zum vorgenannten Zweck.
+          Die Datenschutzerklärung kann hier eingesehen werden.</p>
+      </div>
+      <div class="alert alert-danger" *ngIf="!form.get('dsgvo').pristine && form.hasError('required', ['dsgvo'])">
+        <span>Um mit uns in Kontakt treten zu können müssen Sie den Datenschutzbestimmungen zustimmen.</span>
+      </div>
+    </div>
+    <span *ngIf="isLoading" class="fa-3x pr-1"><i class="fa fa-spinner fa-spin"></i></span>
+    <button [disabled]="form.invalid || isLoading" class="btn btn-primary" type="submit" name="action">Anfrage
+      versenden
+    </button>
+  </form>
+
+  <div id="message">
+    <div id="alert"></div>
+  </div>-->
+
+</div>

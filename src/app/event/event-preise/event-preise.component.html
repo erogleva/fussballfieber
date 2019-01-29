@@ -1,0 +1,43 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 content">
+      <div class="table-responsive">
+        <h3>Getränkeangebot</h3>
+        <table class="table table-hover table-sm">
+          <tbody>
+          <tr *ngFor="let drink of drinks">
+            <td>{{drink.title}}</td>
+            <td class="text-right">{{drink.price}} €</td>
+          </tr>
+          </tbody>
+        </table>
+
+        <h3>Essensangebot</h3>
+        <table class="table table-hover table-sm">
+          <tbody>
+          <tr *ngFor="let food of foods">
+            <td>{{food.title}}</td>
+            <td class="text-right">{{food.price}} €</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 content mt-3">
+      <h3>Specials</h3>
+      <p>An den folgenden Tagen bieten wir zusätzlich folgende Getränke&ndash; und Essensauswahl:</p>
+      <div class="table-responsive">
+        <table class="table table-hover table-sm">
+          <tbody>
+          <tr *ngFor="let special of specials | orderBy: ['type', 'sorting']"
+              [ngClass]="special.cssClass + '' + special.sorting">
+            <td>{{special.title}}</td>
+            <td [innerHTML]="special.day"></td>
+            <td>{{special.price}} €</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

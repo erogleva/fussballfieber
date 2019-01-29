@@ -1,0 +1,21 @@
+{
+  "chooseLanguage": "Sprache",
+  "languages": {
+    "German": "Deutsch",
+    "English": "Englisch",
+    "Spanish": "Spanisch"
+  },
+  "pages": {
+    "home": "Startseite",
+    "match": "Das Spiel",
+    "program": "Programm",
+    "sponsors": "Sponsoren",
+    "contact": "Ansprechpartner"
+  },
+  "header": {
+    "title": "Fußballfieber",
+    "date": "Vom 29.05. bis 05.06.2019",
+    "subTitle": "Der 168 Stunden Weltrekord von Winterbach",
+    "infoBtn": "Informationen zum Weltrekord"
+  }
+}

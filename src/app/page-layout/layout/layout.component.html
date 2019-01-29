@@ -1,0 +1,15 @@
+<app-menu id="top"></app-menu>
+
+<!-- Preview -->
+<app-header></app-header><!-- // Preview -->
+
+<div id="content">
+<!-- *ngIf="!loading; else loadingTemplate">-->
+  <router-outlet></router-outlet>
+</div>
+
+<app-footer></app-footer>
+
+<ng-template #loadingTemplate>
+  <h2>Lade Inhalte...</h2>
+</ng-template>

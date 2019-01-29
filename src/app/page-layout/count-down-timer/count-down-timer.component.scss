@@ -1,0 +1,59 @@
+/* .countdown {
+  position:relative;
+  z-index: 20;
+  display:none;
+} */
+
+h1 {
+  font-size: 3rem;
+}
+
+@media (max-width: 480px) {
+  .countdown_part_small {
+    display:inline-block;
+    padding:0 0.5rem;
+    margin-bottom:1.72rem;
+    text-align: center !important;
+  }
+}
+
+.countdown_part_small {
+  display:inline-block;
+  padding:0 0.5rem;
+  margin-bottom:1.72rem;
+  text-align: center !important;
+}
+
+@media (max-width: 480px) and (max-width: 767px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+.countdown_part {
+  display:inline-block;
+  padding:0 1.5rem;
+  margin-bottom:1.72rem;
+  text-align: center !important;
+}
+
+.countdown_part.first {
+  padding-left:0;
+}
+
+.countdown_part.last {
+  padding-right:0;
+  border-right:none;
+}
+
+.countdown_part h1 {
+  line-height: 2rem !important;
+}
+
+.countdown_part p {
+  margin-bottom:0
+}
+
+.countdown_part {
+  border-right: 1px solid rgba(255, 255, 255, .7);
+}

@@ -1,0 +1,32 @@
+.band {
+  background-color: black;
+  opacity: 0.6;
+  padding: 1rem;
+}
+
+div.band h2,
+div.band p {
+  margin: 0;
+  padding: 0;
+}
+
+div.band h2 {
+  color: #ff8939;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 1.4em;
+  padding: 0.4rem 1.5rem;
+  background-color: #1a1a1a;
+  text-transform: uppercase;
+}
+
+div.band p {
+  display: inline-block;
+  padding: 1rem;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+img {
+  width: 60rem;
+}

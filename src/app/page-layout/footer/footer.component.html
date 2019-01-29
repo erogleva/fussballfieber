@@ -1,0 +1,66 @@
+<footer class="footer">
+  <div class="container-fluid bottom_border">
+    <div class="row align-items-end">
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-lg-offset-2">
+        <h5 class="heading pt2">So finden Sie uns:</h5>
+        <p><i class="fa fa-location-arrow"></i> Oberes Sonnenland 13, 66606 St. Wendel </p>
+        <p><i class="fa fa-phone"></i> +49-176 640 93979 </p>
+        <p><i class="fa fa fa-envelope"></i>
+          <a class="text-white" title="E-Mail schreiben" style="display: inline;margin-left: 10px" href="mailto: info@fussballfieber2019.de">info@fussballfieber2019.de</a>
+        </p>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <h5 class="heading">Informationen</h5>
+        <ul class="footer_ul2 mb-5">
+          <li><a class="text-white" title="Datenschutzerklärung" [routerLink]="['/startseite/datenschutz']" fragment="datenschutz">Datenschutzerklärung</a></li>
+          <li><a class="text-white" title="Impressum" [routerLink]="['/startseite/impressum']" fragment="impressum">Impressum</a></li>
+        </ul>
+      </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 pt-3">
+        <a class="text-white" title="Zum Seitenanfang" style="color: #007bff; cursor: pointer" (click)="myScrollService.scrollTo({ target: 'top' })">
+          <i class="fa fa-arrow-up"></i> Zum Seitenanfang
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <ul class="footer_bottom_ul text-center hidden-xs site-links">
+      <li><a title="Startseite" routerLink="/startseite" routerLinkActive="router-link-active">Startseite</a></li>
+      <li><a title="Das Spiel" routerLink="/spiel" routerLinkActive="router-link-active">Das Spiel</a></li>
+      <li><a title="Programm" routerLink="/event" routerLinkActive="router-link-active">Programm</a></li>
+      <li><a title="Sponsoren" routerLink="/sponsoren" routerLinkActive="router-link-active">Sponsoren</a></li>
+      <li><a title="Medien" routerLink="/media" routerLinkActive="router-link-active">Medien</a></li>
+    </ul>
+
+    <p class="text-center mt-3">Copyright @2019
+      <a aria-label="Mail Kontakt" class="text-white" title="E-Mail senden" href="mailto: t.handle@fussballfieber2019.de">Thomas Handle</a>
+    </p>
+
+    <ul class="social_footer_ul">
+      <li>
+        <a aria-label="Facebook" rel="noopener" target="_blank" title="Facebook" href="https://www.facebook.com/fussballfieber2019">
+          <i class="fa fa-facebook-f"></i>
+        </a>
+      </li>
+      <li>
+        <a aria-label="Twitter" rel="noopener" target="_blank" title="Twitter" href="https://twitter.com/Fussball2019">
+          <i class="fa fa-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a aria-label="Youtube" rel="noopener" target="_blank" title="Youtube" href="https://youtube.fussballfieber2019.de">
+          <i class="fa fa-youtube"></i>
+        </a>
+      </li>
+      <li>
+        <a aria-label="Instagram" rel="noopener" target="_blank" title="Instagram" href="https://www.instagram.com/fussballfieber2019">
+          <i class="fa fa-instagram"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</footer>

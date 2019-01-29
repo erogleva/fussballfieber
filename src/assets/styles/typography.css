@@ -1,0 +1,287 @@
+html {
+  font-family: Heebo sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+a {
+  background: transparent;
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+small {
+  color: #ff8939;
+  font-size: 80%;
+}
+
+img {
+  border: 0;
+}
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+button {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled], html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+optgroup {
+  font-weight: bold;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  color: dimgrey;
+  border-bottom: 1px dotted #cecece;
+}
+a:hover {
+  text-decoration: none;
+}
+
+html {
+  -webkit-font-smoothing: antialiased !important;
+  text-rendering: optimizeLegibility !important;
+  font-size: 14px;
+  line-height: 1.72rem;
+  font-weight: normal;
+}
+
+@media (max-width: 479px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+body {
+  -webkit-font-smoothing: antialiased !important;
+  text-rendering: optimizeLegibility !important;
+}
+
+p {
+  font-weight: 300;
+  font-size: 1rem;
+  letter-spacing: 0.02rem;
+  line-height: 1.72rem;
+  margin: 0 0 1.72rem 0;
+}
+
+p a {
+  font-weight: 400;
+  opacity: 1 !important
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  font-weight: inherit;
+}
+
+h1 {
+  opacity: 0.64;
+  font-weight: 300;
+  letter-spacing: -0.2rem;
+  font-size: 4rem;
+  line-height: 4.28rem;
+  margin: 1.72rem 0 1.72rem 0;
+}
+
+h2 {
+  opacity: 0.64;
+  font-weight: 300;
+  letter-spacing: -0.13rem;
+  font-size: 3.21rem;
+  line-height: 3.44rem;
+  margin: 1.72rem 0 1.72rem 0;
+}
+
+h3 {
+  color: #e7903c;
+  opacity: 0.64;
+  font-weight: 400;
+  letter-spacing: -0.10rem;
+  font-size: 2.42rem;
+  line-height: 2.86rem;
+  margin: 1.72rem 0 1.14rem 0;
+}
+
+@media (max-width: 960px) {
+  h3 {
+    font-size: 1.68rem;
+  }
+}
+
+h4 {
+  opacity: 0.64;
+  font-weight: 400;
+  font-size: 1.52rem;
+  line-height: 2.28rem;
+  margin: 1.52rem 0 1.14rem 0;
+}
+
+h5 {
+  opacity: 0.87;
+  font-weight: 400;
+  letter-spacing: 0.02rem;
+  font-size: 1.42rem;
+  line-height: 2.14rem;
+  margin: 1.72rem 0 1.4rem 0;
+}
+
+h6 {
+  opacity: 0.87;
+  font-weight: 500;
+  letter-spacing: 0.02rem;
+  font-size: 1rem;
+  line-height: 1.72rem;
+  margin: 0;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: 500;
+}
+
+small {
+  letter-spacing: 0.02rem;
+  font-weight: 500;
+  font-size: 0.857rem;
+  line-height: 1.72rem;
+}
+
+nav a {
+  font-size: 0.928rem;
+  line-height: 1.72rem;
+  letter-spacing: 0.03rem;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <base href="/">
+  <title>Fussballfieber | Der Weltrekord</title>
+
+  <meta name="description" content="Fussballfieber 2019 - Der Weltrekordversuch von Winterbach"/>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <meta name="application-name" content="Fussballfieber 2019 - Der Weltrekordversuch von Winterbach">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Fussballfieber 2019 - Der Weltrekordversuch von Winterbach">
+
+  <meta property="og:title" content="Fussballfieber 2019">
+  <meta property="og:site_name" content="fussballfieber2019.de">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.fussballfieber2019.de">
+  <meta property="og:description" content="Fussballfieber 2019 - Der Weltrekordversuch von Winterbach">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@fussballfieber2019">
+  <meta name="twitter:title" content="Fussballfieber 2019">
+  <meta name="twitter:description" content="Fussballfieber 2019 - Der Weltrekordversuch von Winterbach">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="assets/icons/ms-icon-144x144.png">
+
+  <meta name="msapplication-navbutton-color" content="#ffffff">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="msapplication-starturl" content="/">
+
+  <link rel="mask-icon" href="assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="assets/icons/favicon.ico">
+  <meta name="msapplication-config" content="assets/icons/browserconfig.xml">
+  <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+  <meta name="theme-color" content="#f48c5b">
+
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <style type="text/css">
+    body, html {
+      height: 100%;
+    }
+    .app-loading {
+      background-image: radial-gradient(circle at top left, #0a193b 33%, #2e7bff);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+    .app-loading .spinner {
+      height: 200px;
+      width: 200px;
+      animation: rotate 2s linear infinite;
+      transform-origin: center center;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+    .app-loading .spinner .path {
+      stroke-dasharray: 1, 200;
+      stroke-dashoffset: 0;
+      animation: dash 1.5s ease-in-out infinite;
+      stroke-linecap: round;
+      stroke: #ddd;
+    }
+    @keyframes rotate {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes dash {
+      0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+      }
+      50% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -35px;
+      }
+      100% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -124px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<noscript><p>Sorry, JavaScript must be enabled to use this app</p></noscript>
+
+<app-root>
+  <div class="app-loading">
+    <div class="logo"></div>
+    <svg class="spinner" viewBox="25 25 50 50">
+      <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"></circle>
+    </svg>
+  </div>
+</app-root>
+</body>
+</html>

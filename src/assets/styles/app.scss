@@ -1,0 +1,26 @@
+* {
+  font-family: 'Heebo', sans-serif;
+}
+
+body {
+  color: #fff;
+  height: 100%;
+}
+
+.input-field label {
+  color:white;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+footer {
+  color: #fff;
+}
+
+.content-box {
+  border-radius: 15px !important;
+  background-color: rgba(0,0,0,0.4) !important;
+  padding: 3rem;
+}
