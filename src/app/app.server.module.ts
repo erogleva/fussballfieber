@@ -20,7 +20,7 @@ import { TranslatesServerModule } from './shared/translates/translates-server/tr
     AppComponent
   ],
   providers: [
-    { provide: CookieService, useClass: CookieBackendService },
+    // { provide: CookieService, useClass: CookieBackendService },
   ],
 })
 export class AppServerModule {

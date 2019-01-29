@@ -30,4 +30,4 @@ export function translateFactory(transferState: TransferState): TranslatesServer
   ],
   providers: [TranslatesService],
 })
-export class TranslatesServerModule {}
+export class TranslatesServerModule { }

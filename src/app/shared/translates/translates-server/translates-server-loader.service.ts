@@ -10,7 +10,7 @@ export class TranslatesServerLoaderService implements TranslateLoader {
     private prefix: string = 'i18n',
     private suffix: string = '.json',
     private transferState: TransferState,
-  ) {}
+  ) { }
 
   public getTranslation(lang: string): Observable<any> {
     return Observable.create((observer) => {
