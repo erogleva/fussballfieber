@@ -67,9 +67,9 @@ app.get('*.*', express.static(DIST_FOLDER, {
 // All regular routes use the Universal engine
 app.get('*', (req, res) => {
   res.render('index', {
-    req: req,
+    // req: req,
     res: res,
-    /* providers: [
+    providers: [
       {
         provide: REQUEST,
         useValue: req,
@@ -78,7 +78,7 @@ app.get('*', (req, res) => {
         provide: RESPONSE,
         useValue: res,
       },
-    ], */
+    ],
   });
 });
 
