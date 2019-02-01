@@ -105,13 +105,13 @@ app.get('*.*', express.static(path.join(__dirname, '.', 'dist')));
 app.get(ROUTES, express.static(path.join(__dirname, '.', 'static')));
 
 app.get('*', (req, res) => {
+  console.log(req.url);
   global['navigator'] = req['headers']['user-agent'];
   const http =
     req.headers['x-forwarded-proto'] === undefined ? 'http' : req.headers['x-forwarded-proto'];
 
   const url = req.originalUrl;
   // tslint:disable-next-line:no-console
-  console.time(`GET: ${url}`);
   res.render(
     '../dist/index',
     {
