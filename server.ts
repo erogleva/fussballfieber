@@ -1,11 +1,20 @@
 import 'zone.js/dist/zone-node';
 import 'reflect-metadata';
+import { enableProdMode } from '@angular/core';
+import * as express from 'express';
+import * as compression from 'compression';
+import * as cookieparser from 'cookie-parser';
+import { ngExpressEngine } from '@nguniversal/express-engine';
+import { REQUEST, RESPONSE } from '@nguniversal/express-engine/tokens';
+
+const test = process.env['TEST'] === 'true';
 
 const domino = require('domino');
 const fs = require('fs');
 const path = require('path');
-const template = fs.readFileSync(path.join(process.cwd(), 'dist/app/browser', 'index.html')).toString();
+const template = fs.readFileSync(path.join(process.cwd(), '/dist/app/browser', 'index.html')).toString();
 const win = domino.createWindow(template);
+const files = fs.readdirSync(`${process.cwd()}/dist/app/server`);
 
 global['window'] = win;
 Object.defineProperty(win.document.body.style, 'transform', {
@@ -18,71 +27,78 @@ Object.defineProperty(win.document.body.style, 'transform', {
 });
 global['document'] = win.document;
 global['CSS'] = null;
+// global['XMLHttpRequest'] = require('xmlhttprequest').XMLHttpRequest;
 global['Prism'] = null;
 
-(global as any).WebSocket = require('ws');
-(global as any).XMLHttpRequest = require('xhr2');
+// (global as any).WebSocket = require('ws');
+// (global as any).XMLHttpRequest = require('xhr2');
+const { provideModuleMap } = require('@nguniversal/module-map-ngfactory-loader');
 
-import { enableProdMode } from '@angular/core';
-// Express Engine
-import { ngExpressEngine } from '@nguniversal/express-engine';
-// Import module map for lazy loading
-import { provideModuleMap } from '@nguniversal/module-map-ngfactory-loader';
-
-import * as express from 'express';
-import { join } from 'path';
-import { REQUEST, RESPONSE } from '@nguniversal/express-engine/tokens';
+const mainFiles = files.filter((file) => file.startsWith('main'));
+const { AppServerModuleNgFactory, LAZY_MODULE_MAP } = require(`./dist/app/server/main`);
+const PORT = process.env.PORT || 4000;
 
 // Faster server renders w/ Prod mode (dev mode never needed)
 enableProdMode();
 
 // Express server
 export const app = express();
+app.use(compression());
+app.use(cookieparser());
 
-const PORT = process.env.PORT || 4000;
-const DIST_FOLDER = join(process.cwd(), 'dist/app/browser');
-
-// * NOTE :: leave this as require() since this file is built Dynamically from webpack
-const { AppServerModuleNgFactory, LAZY_MODULE_MAP } = require('./dist/app/server/main');
-
-
-// Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
-app.engine('html', ngExpressEngine({
-  bootstrap: AppServerModuleNgFactory,
-  providers: [
-    provideModuleMap(LAZY_MODULE_MAP)
-  ]
-}));
+app.engine('html',
+  ngExpressEngine({
+    bootstrap: AppServerModuleNgFactory,
+    providers: [
+      provideModuleMap(LAZY_MODULE_MAP)
+    ]
+  }));
 
 app.set('view engine', 'html');
-app.set('views', DIST_FOLDER);
+app.set('views', 'dist/app/browser');
 
-// Example Express Rest API endpoints
-// app.get('/api/**', (req, res) => { });
-// Serve static files from /browser
-app.get('*.*', express.static(DIST_FOLDER, {
-  maxAge: '1y'
-}));
+app.get('*.*', express.static(path.join(__dirname, '.', 'dist/app/browser')));
 
-// All regular routes use the Universal engine
 app.get('*', (req, res) => {
-  res.render('index', {
-    // req: req,
-    res: res,
-    providers: [
-      {
-        provide: REQUEST,
-        useValue: req,
-      },
-      {
-        provide: RESPONSE,
-        useValue: res,
-      },
-    ],
-  });
+  global['navigator'] = req['headers']['user-agent'];
+  const http =
+    req.headers['x-forwarded-proto'] === undefined ? 'http' : req.headers['x-forwarded-proto'];
+
+  const url = req.originalUrl;
+  // tslint:disable-next-line:no-console
+  console.time(`GET: ${url}`);
+  res.render(
+    'index',
+    {
+      req: req,
+      res: res,
+      providers: [
+        {
+          provide: REQUEST,
+          useValue: req,
+        },
+        {
+          provide: RESPONSE,
+          useValue: res,
+        },
+        {
+          provide: 'ORIGIN_URL',
+          useValue: `${http}://${req.headers.host}`,
+        },
+      ],
+    },
+    (err, html) => {
+      if (!!err) {
+        throw err;
+      }
+
+      // tslint:disable-next-line:no-console
+      console.timeEnd(`GET: ${url}`);
+      res.send(html);
+    },
+  );
 });
 
-// Start up the Node server
 app.listen(PORT, () => {
-  console.log(`Node Express server listening on http://localhost:${PORT}`);
+  console.log(`listening on http://localhost:${PORT}!`);
 });
