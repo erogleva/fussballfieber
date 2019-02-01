@@ -8,12 +8,15 @@ module.exports = {
   mode: 'development',
   externals: [/(node_modules|main\..*\.js)/],
   entry: {
-    server: './server.ts'
+    // This is our Express server for Dynamic universal
+    server: './server.ts',
+    // This is an example of Static prerendering (generative)
+    prerender: './prerender.ts'
   },
   resolve: { extensions: [".js", ".ts"] },
   output: {
     // Puts the output at the root of the dist folder
-    path: path.join(__dirname, '/dist/app/server'),
+    path: path.join(__dirname),
     filename: '[name].js'
   },
 
@@ -35,5 +38,4 @@ module.exports = {
   node: {
     __dirname: false
   },
-
 };

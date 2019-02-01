@@ -3,9 +3,9 @@ import { environment } from './src/environments/environment';
 const domino = require('domino');
 const fs = require('fs');
 const path = require('path');
-const template = fs.readFileSync(path.join(__dirname, '.', 'dist/app/browser', 'index.html')).toString();
+const template = fs.readFileSync(path.join(__dirname, '.', 'dist', 'index.html')).toString();
 const win = domino.createWindow(template);
-const files = fs.readdirSync(`${process.cwd()}/dist/app/server`);
+const files = fs.readdirSync(`${process.cwd()}/dist-server`);
 
 global['window'] = win;
 Object.defineProperty(win.document.body.style, 'transform', {
@@ -41,13 +41,13 @@ import { ROUTES } from './static.paths';
 // * NOTE :: leave this as require() since this file is built Dynamically from webpack
 const mainFiles = files.filter((file) => file.startsWith('main'));
 const hash = mainFiles[0].split('.')[1];
-const { AppServerModuleNgFactory, LAZY_MODULE_MAP } = require(`./dist/app/server/main.${hash}`);
+const { AppServerModuleNgFactory, LAZY_MODULE_MAP } = require(`./dist-server/main.${hash}`);
 import { REQUEST, RESPONSE } from '@nguniversal/express-engine/tokens';
 
-const BROWSER_FOLDER = join(process.cwd(), 'dist/app/browser');
+const BROWSER_FOLDER = join(process.cwd(), 'static');
 
-// Load the index.html file containing references to application bundle.
-const index = readFileSync(join('dist/app/browser', 'index.html'), 'utf8');
+// Load the index.html file containing referances to your application bundle.
+const index = readFileSync(join('dist', 'index.html'), 'utf8');
 
 let previousRender = Promise.resolve();
 
