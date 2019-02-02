@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Inject, Input, OnDestroy, OnInit, Output, PLATFORM_ID } from '@angular/core';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'count-down-timer',
@@ -17,18 +18,21 @@ export class CountDownTimerComponent implements OnInit, OnDestroy {
 
   public countDownPart: string;
 
-  constructor(public breakpointObserver: BreakpointObserver) {
+  constructor(public breakpointObserver: BreakpointObserver,
+              @Inject(PLATFORM_ID) private platform: any) {
     this.zeroTrigger = new EventEmitter(true);
   }
 
   ngOnInit(): void {
-    this.timer = setInterval(() => {
-      if (this.start) {
-        this.displayTime = this.getTimeDiff(this.start, true);
-      } else {
-        this.displayTime = this.getTimeDiff(this.end);
-      }
-    }, 1000);
+    if (isPlatformBrowser(this.platform)) {
+      this.timer = setInterval(() => {
+        if (this.start) {
+          this.displayTime = this.getTimeDiff(this.start, true);
+        } else {
+          this.displayTime = this.getTimeDiff(this.end);
+        }
+      }, 1000);
+    }
 
     this.breakpointObserver
       .observe(['(max-width: 478px)'])
